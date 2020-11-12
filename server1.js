@@ -11,6 +11,7 @@ function doRequest(req, res){
   res.end();
 }
 app.use(express.static('data'));
+app.use(express.static('data1'));
 app.get('/',function(req, res){
   res.send('<h1>여기는 메인<br> 홈페이지입니다.<h1>')
 });
@@ -30,6 +31,11 @@ app.get('/num',function(req, res){
     s=s+ `<h1>${j} 월<br><h1>`  //특이한 그레이브 부호
   }
   res.send(s);
+});
+app.get('/1',function(req, res){
+  var k = ''; // 빈 문자열
+  k=k+ `<ha> 그런가봐 <h1>`
+  res.send(k);
 });
 
 app.listen(3005,function(){
