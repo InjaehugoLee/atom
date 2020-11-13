@@ -76,6 +76,10 @@ app.get('/test',function(req, res){
   res.send(pick);
 });
 
+app.get('/inf',function(req, res){
+  res.render('inf')
+});
+
 app.listen(3003,function(){
   console.log('server is running 3003');
 })
