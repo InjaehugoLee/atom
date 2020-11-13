@@ -54,6 +54,28 @@ app.get('/1',function(req, res){
   res.send(k);
 });
 
+app.get('/test',function(req, res){
+  var arr=[
+    'coffee',
+    'Tea',
+    'milk',
+    'cocoa',
+    'juice',
+    'icecream'
+
+  ]
+  var pick = `
+  <a href="/test?id=0">coffee</a><br>
+  <a href="/test?id=1">Tea</a><br>
+  <a href="/test?id=2">milk</a><br>
+  <a href="/test?id=3">cocoa</a><br>
+  <a href="/test?id=4">juice</a><br>
+  <a href="/test?id=5">icecream</a><br>
+  ${arr[req.query.id]}
+  `
+  res.send(pick);
+});
+
 app.listen(3003,function(){
   console.log('server is running 3003');
 })
