@@ -22,7 +22,7 @@ app.get('/topic',function(req, res){
   res.send('여기는 토픽 페이지입니다.')
 });
 app.get('/pug',function(req, res){
-  res.render('news')
+  res.render('news', {tl:'머릿말 입니다.'})
 });
 app.get('/dynamic',function(req, res){
   // var sp = ''; //빈 문자열

@@ -3,14 +3,23 @@ Html
   head
     meta(charset='utf-8')
     //주석 처리 이것은 보인다.
-    //- 주석 처리 이것은 안ㅂ노임
+    //- 주석 처리 이것은 안보임
+    title= tl
+    //- = 변수 , #{변수}
+  body 
+  //주석
+  h1 인재 카페에 온거를 환영합니다.
+  h2 메뉴를 고르세요
   body
-    ol
-      li 안녕
-      li Tea
-      li Milk
-      
-    ul
-      li 커피
-      li Tea
-      li Milk
+      ol 커피
+        -for (var i=0; i<10; i++)
+          li 안녕
+      ol    
+        li Tea
+        li Milk
+ 
+      ul 티
+        -for (var i=0; i<10; i++)
+          li 커피
+        li Tea
+        li Milk
