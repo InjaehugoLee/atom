@@ -80,6 +80,18 @@ app.get('/inf',function(req, res){
   res.render('inf')
 });
 
+app.get('/login',function(req, res){
+  var ID=req.query.ID;
+  var PW=req.query.PW;
+  res.send(ID+'님 환영합니다.')
+  res.render('login')
+
+});
+app.get('/pw',function(req, res){
+  res.render('pw')
+
+});
+
 app.listen(3003,function(){
   console.log('server is running 3003');
 })

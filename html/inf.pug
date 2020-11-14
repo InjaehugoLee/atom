@@ -3,11 +3,12 @@ html
     head
       meta(charset='utf-8')
     body
-      form(action='/info')
+      form(action='/login')
         p
           input(type='text' name= 'ID' placeholder='ID를 입력하세요.')
           input(type='text' name= 'PW' placeholder='PW를 입력하세요.')
         p
-          input(type='reset' value='clear')
           input(type='submit' value='login')
-          
+      form(action='/pw')
+          input(type='submit' value='비밀번호가 기억이 안나요.')
+        
